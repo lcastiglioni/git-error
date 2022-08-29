@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{%block title%}
+Login
+{%endblock%}
+
+{%block text%}
+
+
+
+<form action="" method='POST' style="padding:2%; margin: auto;max-width: 500px; ">
+    {% csrf_token %}
+    
+        {{form | crispy}}
+
+    
+
+    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+    <div> <a href="/user/register/" class="btn btn-success">registrar</a></div>
+</form>
+{% if error %}
+<p style="color: red;">{{error}}</p>
+{% endif %}
+{% endblock %}

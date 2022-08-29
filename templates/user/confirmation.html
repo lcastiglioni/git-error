@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block link %}
+      <link type="text/css" href="{% static '/css/style.css' %}" rel="stylesheet" />
+    {%endblock%}
+
+    {% block title%}
+
+    Index
+
+    {% endblock %}
+
+    {%block text%}
+
+<h1>Sus cambios han sido realizados con exito</h1>
+
+
+<div> <a href="/inicio/" class="btn btn-success"> <button type="submit" class="btn btn-primary "> Volver a Inicio</button>
+</a>
+</div>
+
+<p style="color: red;">{{errors}}</p>
+    {% endblock %}

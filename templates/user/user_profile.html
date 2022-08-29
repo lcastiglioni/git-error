@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{%block title%}
+User Profile
+{%endblock%}
+
+{%block text%}
+
+
+<div class="container" style="align-items:center ; max-width:500px ;">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+       
+
+            {{form | crispy}}
+       
+            
+            
+    <button type="submit" class="btn btn-primary ">Guardar</button>
+    <input type="button" value="Volver"  onclick="history.back()">
+    </form>
+    
+    <p style="color: red;">{{errors}}</p>
+</div>
+{% endblock %}
+

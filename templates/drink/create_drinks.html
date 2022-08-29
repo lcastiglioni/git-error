@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block link %}
+      <link type="text/css" href="{% static '/css/style.css' %}" rel="stylesheet" />
+    {%endblock%}
+{%block title%}
+Creador de bebidas
+{%endblock%}
+
+{%block text%}
+
+<h1>Bebidas</h1>
+
+<form action="" method='POST' enctype="multipart/form-data" style="margin-left: 35% ; margin-top: 7%; margin-bottom: 10%; " >
+    {% csrf_token %}
+
+    {{form | crispy}}
+
+    
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <input type="button" value="Volver"  onclick="history.back()">
+</form>
+
+{% endblock %}
