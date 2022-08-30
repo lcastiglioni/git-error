@@ -18,6 +18,7 @@ class Cart:
                     "name": product.name,
                     "amount": product.price,
                     "quantity": 1,
+                    "product_unic" : product.unic,
                 }
             else:
                 self.cart[id]["quantity"] += 1
